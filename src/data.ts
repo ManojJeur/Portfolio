@@ -1,0 +1,95 @@
+export const profile = {
+  name: 'Manoj Jeur',
+  role: 'Java Backend Developer',
+  focus: 'Java · Spring Boot · backend systems',
+  intro: 'I build dependable backend services with Java and Spring Boot, from secure APIs and data models to analytics and the systems around them.',
+  github: 'https://github.com/ManojJeur',
+  linkedin: 'https://www.linkedin.com/in/manoj-jeur-3845b02b0/',
+  leetcode: 'https://leetcode.com/u/manoj_jeur045/',
+  email: 'manojjeur045@gmail.com',
+  resume: '/resume.pdf',
+  education: 'B.Tech, Computer Science and Business Systems',
+  college: "KIT's College of Engineering",
+  graduation: 'Expected 2027',
+  cgpa: '7.56 / 10',
+}
+
+export const projects = [
+  {
+    number: '01', name: 'URL Shortener API', category: 'Backend',
+    summary: 'A versioned Spring Boot API for link lifecycle management, redirects, analytics, and optional AI summaries.',
+    problem: 'Short links need safe ownership controls, fast redirects, and useful usage reporting behind a stable API.',
+    features: ['JWT access tokens and hashed refresh tokens with owner-aware link access', 'PostgreSQL schema managed with Flyway; Redis caching and endpoint-specific rate limits', 'Versioned /api/v1 routes for link management, redirects, analytics, and reports; optional Spring AI integration', 'Docker and Render deployment configuration documented'],
+    stack: ['Java 17', 'Spring Boot 3.3', 'Spring Security', 'PostgreSQL', 'Flyway', 'Redis', 'Spring AI', 'Docker'],
+    github: 'https://github.com/ManojJeur/UrlShortner',
+    demo: null,
+  },
+  {
+    number: '02', name: 'Coolie Express', category: 'Backend',
+    summary: 'A location-aware porter booking API connecting travelers with available porters through role-specific workflows.',
+    problem: 'Travelers need a way to find available porters and see pricing before booking; porters need controls for availability and per-bag rates.',
+    features: ['Traveler, Coolie, and Admin roles with Spring Security and stateless JWT authentication', 'Email OTP account verification; DTO-based API contracts and centralized exception responses', 'Matching uses current location and availability; booking flow exposes transparent price estimates', 'Dockerized for deployment; project notes describe Render hosting with cloud PostgreSQL'],
+    stack: ['Java 17', 'Spring Boot 3.2', 'Spring Security', 'JPA / Hibernate', 'PostgreSQL', 'JWT', 'JavaMailSender', 'Docker'],
+    github: 'https://github.com/ManojJeur/CoolieExpress',
+    demo: null,
+  },
+  {
+    number: '03', name: 'SalesSavvy Backend API', category: 'Backend',
+    summary: 'A Spring Boot commerce API spanning catalog, cart, order, identity, payment, and admin reporting workflows.',
+    problem: 'An online store must keep customer and admin operations separate while connecting checkout to verified payment processing.',
+    features: ['Stateless JWT security with BCrypt password hashing and customer/admin access boundaries', 'Razorpay checkout integration with signature verification before payment completion', 'JPA-backed product, cart, order, and order-item models; order items retain a purchase-time snapshot', 'REST APIs separate customer operations from admin inventory and dashboard endpoints'],
+    stack: ['Java 17', 'Spring Boot', 'Spring Security', 'Spring Data JPA', 'MySQL', 'JWT', 'Razorpay'],
+    github: 'https://github.com/ManojJeur/SalesSavvy-Backend',
+    demo: null,
+  },
+  {
+    number: '04', name: 'Finance Dashboard Backend', category: 'Backend',
+    summary: 'A Java 17 REST backend for managing financial records and serving dashboard-ready summaries.',
+    problem: 'Financial data needs protected write access and focused read APIs for reviewing income, expenses, balances, and categories.',
+    features: ['Spring Security custom JWT filter for login/register and protected REST endpoints', 'ADMIN can create, update, and delete records; ANALYST access is read-only with analytics', 'Summary APIs cover total income, total expense, net balance, and category-wise analysis', 'Spring Data JPA persists records in MySQL; Swagger / OpenAPI 3 documents the API', 'Monthly trends are listed as upcoming work'],
+    stack: ['Java 17', 'Spring Boot', 'Spring Security', 'Spring Data JPA', 'MySQL', 'JWT', 'OpenAPI 3'],
+    github: 'https://github.com/ManojJeur/FinanceDashboardBackend',
+    demo: null,
+  },
+  {
+    number: '05', name: 'Real Estate Intelligence Platform', category: 'AI / Data',
+    summary: 'A multi-service property platform combining AI-assisted research with verifiable property proofs on Algorand TestNet.',
+    problem: 'Property insights need relevant source context, while verification should make tampering with submitted property data detectable.',
+    features: ['FastAPI coordinates property APIs with separate RAG and blockchain services in Docker Compose', 'MiniLM embeddings and FAISS retrieval provide context to Groq-generated answers', 'Verification hashes property metadata and document references; Algorand stores proof hashes and metadata, not document contents or personal data', 'Next.js client supports Pera Wallet connection for seller verification; PostgreSQL backs property data'],
+    stack: ['Python', 'FastAPI', 'Next.js', 'PostgreSQL', 'MiniLM', 'FAISS', 'Groq', 'Algorand TestNet', 'Docker'],
+    github: null,
+    demo: null,
+    note: 'Repository link not supplied',
+  },
+  {
+    number: '06', name: 'DSA Implementations', category: 'Problem Solving',
+    summary: 'A code collection for practicing core data structures and algorithmic techniques.',
+    problem: 'Backend problem solving depends on choosing suitable structures and reasoning clearly about operations.',
+    features: ['Implementations organized around data structures and algorithms', 'Practice code available in the public repository'],
+    stack: [],
+    github: 'https://github.com/ManojJeur/Dsa_Implementations-by-Manoj',
+    demo: null,
+  },
+  {
+    number: '07', name: 'Food Delivery', category: 'In Progress',
+    summary: 'A food delivery application in progress, being developed with a microservices approach.',
+    problem: 'The project explores how a delivery workflow can be split across collaborating backend services.',
+    features: ['Microservices-based application, currently under development'],
+    stack: [],
+    github: 'https://github.com/ManojJeur/Food-Delivery',
+    demo: null,
+  },
+]
+
+export const skills = [
+  { title: 'Backend', items: ['Java', 'Spring Boot', 'Spring Security', 'Spring Data JPA', 'Hibernate', 'Spring AI', 'REST APIs', 'Microservices', 'Kafka'] },
+  { title: 'Databases & Retrieval', items: ['PostgreSQL', 'MySQL', 'Redis', 'SQL', 'Flyway', 'RAG', 'FAISS'] },
+  { title: 'Tools & Platforms', items: ['Docker', 'Kubernetes', 'Maven', 'Git & GitHub', 'Render'] },
+  { title: 'Problem Solving', items: ['Data structures', 'Algorithms', 'LeetCode'] },
+]
+
+export const achievements = [
+  { value: '400+', label: 'LeetCode problems', detail: 'Solved' },
+  { value: '98%', label: 'NPTEL · Programming in Java', detail: 'Certificate' },
+  { value: '91%', label: 'NPTEL · Cybersecurity', detail: 'Elite grade' },
+]
